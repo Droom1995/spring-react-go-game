@@ -6,7 +6,7 @@ const path = require("path");
 const FRONTEND_DIR = path.resolve(__dirname, 'src');
 
 const appConfig = {
-    entry: path.join(FRONTEND_DIR, "/index.tsx"),
+    entry: path.join(FRONTEND_DIR, "/index.ts"),
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: 'bundle.js',
