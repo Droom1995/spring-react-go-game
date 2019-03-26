@@ -1,10 +1,9 @@
 package com.mancala.model.dto;
 
-import com.mancala.model.entity.PlayerStateEntity;
+import com.mancala.model.consts.Players;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -15,7 +14,7 @@ import java.util.List;
 @Setter
 @Builder
 public class GameStateDto {
-    private int activePlayer;
-    List<PlayerStateDto> playerStateDtoList;
-    private boolean gameOver;
+    private Players activePlayer;
+    private int size;
+    private List<Integer> board;
 }

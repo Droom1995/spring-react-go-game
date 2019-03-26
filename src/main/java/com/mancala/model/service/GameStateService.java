@@ -7,22 +7,11 @@ import com.mancala.model.dto.GameStateDto;
  */
 public interface GameStateService {
 
-
-    int getSmallPitValue(int playerId, int pitNumber);
-
-    void updateSmallPitValue(int playerId, int pitNumber, int value);
-
-    void updateScorePitValue(int playerId, int value);
-
     void initGame();
 
     void changeActivePlayer();
 
-    boolean isGameOver();
-
-    void setGameOver();
-
-    int getActivePlayer();
+    boolean validatePlayer(int playerId);
 
     GameStateDto getGameState();
 }

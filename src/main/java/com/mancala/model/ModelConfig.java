@@ -17,14 +17,7 @@ import org.springframework.web.context.annotation.ApplicationScope;
 @Configuration
 public class ModelConfig {
 
-    @Value("${players.number}")
-    private int playersNumber;
 
-    @Value("${pits.number}")
-    private int pitsNumber;
-
-    @Value("${starting.stone.number}")
-    private int startingStoneNumber;
 
     @Bean
     public GameLogicService getGameLogicService(){

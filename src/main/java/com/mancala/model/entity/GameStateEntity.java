@@ -2,12 +2,12 @@
 
 package com.mancala.model.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import com.mancala.model.consts.Players;
+import lombok.*;
 
 import java.util.ArrayList;
+import java.util.EnumMap;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -17,11 +17,10 @@ import java.util.List;
 @Setter
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class GameStateEntity {
-    private int activePlayer;
-    List<PlayerStateEntity> playerStateEntityList;
-    private boolean gameOver;
-
-
-
+    private Players activePlayer;
+    private HashMap<Integer, Players> playerIds;
+    private int size;
+    private List<Integer> board;
 }
